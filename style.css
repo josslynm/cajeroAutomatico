@@ -1,6 +1,7 @@
 html{
     font-size: 62.5;
     /* gracias a esto el padding no afecta al tamaño */
+    
     box-sizing: border-box; /* hack para box model */
 }
 
@@ -8,6 +9,15 @@ html{
 *, *:before, *:after {
     box-sizing: inherit; 
   }
+
+  body{
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    /* degradado de colores( direccion, color 0%, color 100%) */
+    /* background-image: linear-gradient(to top, #DFE9F3 0%, var(--blanco) 100%); */
+    background-image: linear-gradient(to top, pink 0%, white 100%);
+
+}
 
   /* Clase contenedor para centrar en el sitio */
 .contenedor{
@@ -21,6 +31,7 @@ html{
 
 .titulo{
     text-align: center;
+    font-family: 'Lato', sans-serif;
 }
 
 .enviarUsuario input{
@@ -48,7 +59,7 @@ html{
     -moz-box-shadow: 0px -2px 5px 3px rgba(0,0,0,0.59);
     box-shadow: 0px -2px 5px 3px rgba(0,0,0,0.59);
     
-    background-color: var(--blanco);
+    background-color: white;
     padding: 2rem;
     border-radius: 1rem;
 }

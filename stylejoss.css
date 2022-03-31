@@ -1,5 +1,6 @@
 html{
     font-size: 62.5;
+    
     /* gracias a esto el padding no afecta al tamaño */
     box-sizing: border-box; /* hack para box model */
 }
@@ -9,12 +10,19 @@ html{
     box-sizing: inherit; 
   }
 
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: lightpink;
+}
+
 .titulo{
     text-align: center;
+    
+    font-family: 'Lato', sans-serif;
 }
 
 .titulo span{
-    font-size: 1.2rem;
+    font-size: 0.8rem;
 }
 
 #botones{
@@ -23,24 +31,64 @@ html{
     align-items: center;
 }
 
-.btn-operacion{
 
+
+.btn-operacion{
     
+    font-family: 'Hind Madurai', sans-serif;
     text-align: center;
     background-color: lightgray;
+    border-color: gray;
+    
     
     padding: 1rem 1rem;
     margin-top: 1rem;
     font-size: 1.3rem;
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: bold;
+    /* font-weight: bold; */
     border-radius: .5rem;
     width: 90%;
     cursor:pointer;
-    line-height: ;
     width: 15rem;
      
 }
+
+
+.resultadoOp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resultadoOp #resultadoBoton{
+    width: 20rem;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    padding: 1rem 1rem;
+    margin-top: 1rem;
+}
+
+.contenedor{
+    /* si es que hay 120rem */
+    max-width: 90rem; /*Acorta o ensancha el largo*/
+    /* margin: TOP RIGTH BOT LEFT */
+    margin: 0 auto ; /* En que posicion se coloca un elemento */
+    /* Si solo hay 2 valores sobreentiende que 0 es top y bot */
+    
+}
+
+.sombra{
+
+    -webkit-box-shadow: -2px 4px 7px -1px rgba(0,0,0,0.69);
+    -moz-box-shadow: -2px 4px 7px -1px rgba(0,0,0,0.69);
+    box-shadow: -2px 4px 7px -1px rgba(0,0,0,0.69);
+    
+    background-color: whitesmoke;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
 
 

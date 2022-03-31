@@ -1,11 +1,3 @@
-// *Declaracion de usuarios por medio de objetos
-const usuarioJoss ={
-
-    nombre: "Jocelyn",
-    contrasena: "1234" ,
-    saldo: 150
-}
-    
 const usuarioAlejandro ={
 
     nombre: "Alejandro",
@@ -13,49 +5,12 @@ const usuarioAlejandro ={
     saldo: 80
 }
 
-const usuarioOsvaldo ={
-
-    nombre: "Osvaldo",
-    contrasena: "1234" ,
-    saldo: 350
-}
-
-
-//*Ingreso de usuario con funcion comparar
-
-function comparar(){
-
-    const entrada1= document.querySelector("#sn").value;
-    const contra1= document.querySelector("#passwd").value;
-
-   
-
-    if(entrada1== usuarioJoss.nombre && contra1 == usuarioJoss.contrasena){
-        document.querySelector("#mensajeLogin").innerHTML="Clave correcta"
-        location.href ="jocelyn.html";
-    }else if( entrada1 == usuarioAlejandro.nombre && contra1 == usuarioAlejandro.contrasena){
-        document.querySelector("#mensajeLogin").innerHTML="Clave correcta"
-        location.href ="Alejandro.html";
-    }else if(entrada1 == usuarioOsvaldo.nombre && contra1 == usuarioOsvaldo.contrasena){
-        document.querySelector("#mensajeLogin").innerHTML="Clave correcta"
-        location.href ="Marilyn.html";
-    }else{
-        document.querySelector("#mensajeLogin").innerHTML="Usuario y/o contraseña incorrecta"
-    }
-
-}
-
-
-
-//* botones accion
-
-
 const btnNombre = document.querySelector("#botones");
 
 // TODO: funcion que da accion a los botones para el usuario Jocelyn
-function disparaAccionJoss(event) {
+function disparaAccionAlejandro(event) {
 
-    var saldoAccion = usuarioJoss.saldo;
+    var saldoAccion = usuarioAlejandro.saldo;
     const botonReact= event.target.textContent;
  
     switch (botonReact) {
@@ -69,7 +24,7 @@ function disparaAccionJoss(event) {
 
         
             var ingreso= Number(prompt("Ingresa monto:"))
-            var cantidadActual = usuarioJoss.saldo;
+            var cantidadActual = usuarioAlejandro.saldo;
 
             var prueba= ingreso+cantidadActual;
        
@@ -77,21 +32,22 @@ function disparaAccionJoss(event) {
 
            if(cantidadActual < 990 && prueba <= 990){
 
-                var nuevaCantidad= cantidadActual+ingreso;
+              var nuevaCantidad= cantidadActual+ingreso;
                
-                document.querySelector("#resultadoBoton").innerHTML=`Ingresó $${ingreso}. Tu saldo es de ${nuevaCantidad}`;
+            document.querySelector("#resultadoBoton").innerHTML=`Ingresó $${ingreso}. Tu saldo es de $${nuevaCantidad}`;
 
-               usuarioJoss.saldo= nuevaCantidad;
+               usuarioAlejandro.saldo= nuevaCantidad;
 
            }else if(cantidadActual >= 990){
 
             alert("Ya tienes el monto máximo. No puedes ingresar mas");
 
             document.querySelector("#resultadoBoton").innerHTML="Ya tienes el monto máximo."
+
            }else if(prueba > 990){
                var montoMax= 990-cantidadActual;
                 alert(`El monto máximo que puedes agregar es ${montoMax}. Intentalo de nuevo`);
-                document.querySelector("#resultadoBoton").innerHTML=`Ingresa una cantidad menor`
+            document.querySelector("#resultadoBoton").innerHTML=`Ingresa una cantidad menor`
            }
 
           break;
@@ -99,16 +55,16 @@ function disparaAccionJoss(event) {
         case 'Retirar monto':
 
             var retiro= Number(prompt("Ingresa monto:"))
-            var actual = usuarioJoss.saldo;
+            var actual = usuarioAlejandro.saldo;
 
             var prueba2= actual-retiro;
 
             if(actual > 10 && prueba2 >=10){
                 var nuevoMonto = actual - retiro;
                 
-                document.querySelector("#resultadoBoton").innerHTML=`Retiró $${retiro}. Tu saldo es de $${nuevoMonto}`;
+                document.querySelector("#resultadoBoton").innerHTML=`Retiró $${retiro} .Tu saldo es de $${nuevoMonto}`;
 
-                usuarioJoss.saldo= nuevoMonto;
+                usuarioAlejandro.saldo= nuevoMonto;
             }else if(actual <=10){
                 
                 alert("Ya tienes el monto mínimo. No puedes retirar mas");
@@ -131,5 +87,4 @@ function disparaAccionJoss(event) {
     
 }
     
-btnNombre.addEventListener('click',disparaAccionJoss);
-
+btnNombre.addEventListener('click',disparaAccionAlejandro);
