@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cajero Automatico</title>
+</head>
+<body>
+
+    <header class="header1">
+        <h1 class="titulo">Cajero Automático <span>Jocelyn Mejía</span> </h1> <!-- No tener mas de un h1 -->
+    </header>
+
+    <main class="contenedor sombra">
+        <div class="datos">
+                    
+            <div>
+                 <p>Ingresa nombre de usuario:</p>
+                 <input id="sn" type="text" placeholder="Tu usuario">
+            </div>
+             
+            <div>
+                 <p>Ingresa contraseña:</p>
+                 <input id="passwd" type="password" placeholder="Tu contraseña">
+            </div>
+         
+             <!-- Boton para enviar de 2 formas -->
+             <div class="enviarUsuario">
+                 <input onclick=comparar()  type="submit" value="Enviar">
+             </div>
+             <div>
+                 <p id="mensajeLogin"></p>
+             </div>
+         
+         </div>
+
+    </main>
+            
+
+                
+         
+
+            
+
+
+       <script src="proyecto.js"></script>
+</body>
+</html>

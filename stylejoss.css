@@ -1,0 +1,46 @@
+html{
+    font-size: 62.5;
+    /* gracias a esto el padding no afecta al tamaño */
+    box-sizing: border-box; /* hack para box model */
+}
+
+/* * Indica que aplica para todo el contenido*/
+*, *:before, *:after {
+    box-sizing: inherit; 
+  }
+
+.titulo{
+    text-align: center;
+}
+
+.titulo span{
+    font-size: 1.2rem;
+}
+
+#botones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-operacion{
+
+    
+    text-align: center;
+    background-color: lightgray;
+    
+    padding: 1rem 1rem;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    cursor:pointer;
+    line-height: ;
+    width: 15rem;
+     
+}
+
+
