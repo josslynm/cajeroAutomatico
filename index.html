@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Cajero Automatico</title>
 </head>
+
 <body>
 
 
@@ -18,30 +19,44 @@
         </h1> <!-- No tener mas de un h1 -->
     </header>
 
-    <main class="contenedor sombra">
-        <div class="datos">
-                    
-            <div>
-                 <p>Ingresa nombre de usuario:</p>
-                 <input id="sn" type="text" placeholder="Tu usuario">
-            </div>
-             
-            <div>
-                 <p>Ingresa contraseña:</p>
-                 <input id="passwd" type="password" placeholder="Tu contraseña">
-            </div>
-         
-             <!-- Boton para enviar de 2 formas -->
-             <div class="enviarUsuario">
-                 <input onclick=comparar()  type="submit" value="Enviar">
-             </div>
-             <div>
-                 <p id="mensajeLogin"></p>
-             </div>
-         
-         </div>
+         <!-- <main > -->
+        <main class="contenedor sombra">
 
-    </main>
+            <div class="datos ">
+                    
+                <div>
+                     <p>Ingresa nombre de usuario:</p>
+                     <input id="sn" type="text" placeholder="Tu usuario">
+                </div>
+                 
+                <div>
+                     <p>Ingresa contraseña:</p>
+                     <input id="passwd" type="password" placeholder="Tu contraseña">
+                </div>
+             
+                 
+                <div class="enviarUsuario">
+                     <input onclick=comparar()  type="submit" value="Enviar">
+                </div>
+    
+    
+                <div>
+                     <p id="mensajeLogin"></p>
+                </div>
+    
+                 
+             
+    
+            </div>
+
+
+
+
+        </main>
+
+
+        
+
             
 
                 
@@ -50,6 +65,6 @@
             
 
 
-       <script src="proyecto.js"></script>
+        <script src="proyecto.js"></script>
 </body>
 </html>

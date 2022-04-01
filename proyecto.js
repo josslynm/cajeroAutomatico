@@ -53,6 +53,7 @@ function comparar(){
 const btnNombre = document.querySelector("#botones");
 
 // TODO: funcion que da accion a los botones para el usuario Jocelyn
+
 function disparaAccionJoss(event) {
 
     var saldoAccion = usuarioJoss.saldo;
@@ -60,12 +61,12 @@ function disparaAccionJoss(event) {
  
     switch (botonReact) {
 
-        case 'Consultar saldo':
+        case 'Consultar saldo': //*Consulta
 
             document.querySelector("#resultadoBoton").innerHTML=`Tu saldo es de $${saldoAccion}`;
           break;
 
-        case 'Ingresar monto':
+        case 'Ingresar monto': //*Ingresar
 
         
             var ingreso= Number(prompt("Ingresa monto:"))
@@ -75,7 +76,7 @@ function disparaAccionJoss(event) {
        
 
 
-           if(cantidadActual < 990 && prueba <= 990){
+           if(cantidadActual < 990 && prueba <= 990){ //! Condiciones para poder ingresar monto
 
                 var nuevaCantidad= cantidadActual+ingreso;
                
@@ -83,13 +84,13 @@ function disparaAccionJoss(event) {
 
                usuarioJoss.saldo= nuevaCantidad;
 
-           }else if(cantidadActual >= 990){
+           }else if(cantidadActual >= 990){  //! monto maximo alcanzado
 
             alert("Ya tienes el monto máximo. No puedes ingresar mas");
-
             document.querySelector("#resultadoBoton").innerHTML="Ya tienes el monto máximo."
-           }else if(prueba > 990){
-               var montoMax= 990-cantidadActual;
+
+           }else if(prueba > 990){ //! Supera monto maximo
+                var montoMax= 990-cantidadActual;
                 alert(`El monto máximo que puedes agregar es ${montoMax}. Intentalo de nuevo`);
                 document.querySelector("#resultadoBoton").innerHTML=`Ingresa una cantidad menor`
            }
@@ -103,18 +104,18 @@ function disparaAccionJoss(event) {
 
             var prueba2= actual-retiro;
 
-            if(actual > 10 && prueba2 >=10){
+            if(actual > 10 && prueba2 >=10){ //! Condiciones para poder retirar
                 var nuevoMonto = actual - retiro;
                 
                 document.querySelector("#resultadoBoton").innerHTML=`Retiró $${retiro}. Tu saldo es de $${nuevoMonto}`;
 
                 usuarioJoss.saldo= nuevoMonto;
-            }else if(actual <=10){
+            }else if(actual <=10){ //!Se alcanzo el monto minimo
                 
                 alert("Ya tienes el monto mínimo. No puedes retirar mas");
                 document.querySelector("#resultadoBoton").innerHTML="Ya tienes el monto minimo."
 
-            }else if( prueba2 = 10){
+            }else if( prueba2 = 10){  //!Monto maximo para retirar
                 var retiroMax= actual-10;
                 //console.log(`El monto maximo que puedes retirar es ${retiroMax}. Intentalo de nuevo`)
                 alert(`El monto máximo que puedes retirar es ${retiroMax}. Intentalo de nuevo`);
@@ -130,6 +131,8 @@ function disparaAccionJoss(event) {
     
     
 }
+
+
     
 btnNombre.addEventListener('click',disparaAccionJoss);
 
